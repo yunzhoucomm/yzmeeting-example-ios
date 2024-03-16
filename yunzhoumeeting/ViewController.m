@@ -74,7 +74,7 @@
     NSLog(@"【点击了创建会议按钮】");
     NSDictionary *userDic = @{@"userId" : [NSString stringWithFormat:@"%ld", [self generateRandomNumberWithDigits:6]],
                               @"userName" : [NSString stringWithFormat:@"demo-user%ld", [self generateRandomNumberWithDigits:3]],
-                              // 请替换成自己的头像地址
+                              // 请替换成自己的头像地址，填""会展示默认头像
                               @"avatar" : @"http://your_user_server_url/photos/4dde5410e72f9440e510735638723358"
     };
     [[YunzhouMeetingApi sharedInstance] startWithController:self options:@{
@@ -89,7 +89,7 @@
     NSLog(@"【点击了加入会议按钮】");
     NSDictionary *userDic = @{@"userId" : [NSString stringWithFormat:@"%ld", [self generateRandomNumberWithDigits:6]],
                               @"userName" : [NSString stringWithFormat:@"demo-user%ld", [self generateRandomNumberWithDigits:3]],
-                            // 请替换成自己的头像地址
+                            // 请替换成自己的头像地址，填""会展示默认头像
                               @"avatar" : @"http://your_user_server_url/photos/4dde5410e72f9440e510735638723358"
     };
     [[YunzhouMeetingApi sharedInstance] startWithController:self options:@{
