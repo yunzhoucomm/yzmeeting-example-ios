@@ -871,17 +871,6 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@livekit/react-native-webrtc@104.0.0":
-  version "104.0.0"
-  resolved "https://registry.npmjs.org/@livekit/react-native-webrtc/-/react-native-webrtc-104.0.0.tgz#07f0a5de7b69b8aa859089f1f5ec339aa437cca0"
-  integrity sha512-4+//X6RA2vF9fEYRKbAOj0ay3Mktcb0wh1fI0eOtOY+OSMpW9ni1+VRUdwt1yR2eP7d2O1pVYtj2VXpW3qu2tQ==
-  dependencies:
-    adm-zip "0.5.9"
-    base64-js "1.5.1"
-    debug "4.3.4"
-    event-target-shim "6.0.2"
-    tar "6.1.11"
-
 "@react-aria/checkbox@3.2.1":
   version "3.2.1"
   resolved "https://registry.npmjs.org/@react-aria/checkbox/-/checkbox-3.2.1.tgz#493d9d584b4db474645a4565c4f899ee3a579f07"
@@ -1982,6 +1971,17 @@
   resolved "https://registry.npmjs.org/@yunzhoukit/react-native-utils/-/react-native-utils-0.0.6.tgz#66ce5c7a4b68980acb810a73ae3c4582505e8fe2"
   integrity sha512-zFACdUwcVL3wbuyy0kR5m4976MutAeoIboTu5VlvE//8aGomonpf0YONwYw2LfgWsFjZWHFssUkRnpf+XErqQg==
 
+"@yunzhoukit/react-native-webrtc@104.0.0":
+  version "104.0.0"
+  resolved "https://registry.npmjs.org/@yunzhoukit/react-native-webrtc/-/react-native-webrtc-104.0.0.tgz#590c3d46079674d782badc38aae90b07688afd16"
+  integrity sha512-zWYKX+zUulJTK3o06HbcciTWVCMFJwsEkliFVRPJR9LHLbeM3WxjLxnrewBg9s3L+3L/VWyTkoAdum5hUOn26g==
+  dependencies:
+    adm-zip "0.5.9"
+    base64-js "1.5.1"
+    debug "4.3.4"
+    event-target-shim "6.0.2"
+    tar "6.1.11"
+
 "@yunzhoukit/rn-foreground-service@2.1.5":
   version "2.1.5"
   resolved "https://registry.npmjs.org/@yunzhoukit/rn-foreground-service/-/rn-foreground-service-2.1.5.tgz#abe28dd92789d0f36083b0ddf5fd8569deb2dd6e"
@@ -2001,10 +2001,10 @@
     typed-emitter "^2.1.0"
     webrtc-adapter "^8.1.1"
 
-"@yunzhoukit/yunzhou-react-native@0.5.3":
-  version "0.5.3"
-  resolved "https://registry.npmjs.org/@yunzhoukit/yunzhou-react-native/-/yunzhou-react-native-0.5.3.tgz#9fd9297f18eee19bd22e24159af6478e2ca02743"
-  integrity sha512-/TnbpSUjRrHAqvmFqvgd7aI8E47WJi3i9eo7Ki+pEPz+8Vzb/0KFD7KrjzI+JZROjvd5kDSM+hz1e9ffNIfHcw==
+"@yunzhoukit/yunzhou-react-native@0.5.5":
+  version "0.5.5"
+  resolved "https://registry.npmjs.org/@yunzhoukit/yunzhou-react-native/-/yunzhou-react-native-0.5.5.tgz#d18403a0c156a0b1eccf560b3f3eae56ce2a3071"
+  integrity sha512-bM7bJiF6983l6lrnLAVamyecNlRnT42UYwIeubaE2QhDhzBW6k4OFMHu5qFlBSvlhsuEabkXG6HlEaK8IT9Kig==
   dependencies:
     "@yunzhoukit/yunzhou-client" "1.15.15"
     array.prototype.at "^1.1.1"

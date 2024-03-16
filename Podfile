@@ -1,6 +1,6 @@
 inhibit_all_warnings!
 source 'https://gitee.com/yunzhoucomm/yzwebrtc-sdk' # 为了加快webrtc-sdk的下载速度弄的映射
-source 'https://github.com/CocoaPods/Specs.git'#cocoapods 公用仓库地址
+source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'#cocoapods 公用仓库地址
 
 
 platform :ios, '12.0'
@@ -23,7 +23,7 @@ target 'yunzhoumeeting' do
   pod 'RNSVG', :path => './node_modules/react-native-svg'
   pod 'RNScreens', :path => './node_modules/react-native-screens'
   pod 'react-native-receive-sharing-intent', :path => './node_modules/react-native-receive-sharing-intent'
-  pod 'livekit-react-native-webrtc', :path => './node_modules/@livekit/react-native-webrtc'
+  pod 'yunzhou-react-native-webrtc', :path => './node_modules/@yunzhoukit/react-native-webrtc'
   pod 'react-native-pager-view', :path => './node_modules/react-native-pager-view'
   pod 'react-native-safe-area-context', :path => './node_modules/react-native-safe-area-context'
   pod 'react-native-keep-awake', :path => './node_modules/@sayem314/react-native-keep-awake'
