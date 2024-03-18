@@ -27,6 +27,7 @@
 
 项目最低支持版本iOS 12.0及以上
 Xcode14及以上
+运行在真机iOS12.0的系统及以上
 
 ### 获取会议服务器地址
 如果自己部署会议服务器，会议服务器地址为自己部署的会议服务器地址
@@ -53,6 +54,7 @@ sudo gem install cocoapods
 pod install
 ```
 podfile文件会自动执行Podfile_ReactNative.rb脚本，自动判断是否存在node_modules和rn环境，不存在会自动搭建环境和获取node_modules文件
+
 ## 手动集成步骤
 ### 导入SDK文件夹
 该SDK为静态库，里面包含.a文件和bundle资源文件。
