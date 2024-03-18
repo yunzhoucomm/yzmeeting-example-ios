@@ -1,4 +1,4 @@
-# yzmeeting-demo-ios
+# yzmeeting-example-ios
 
 # 概述
 
