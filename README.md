@@ -150,4 +150,11 @@ typedef NS_ENUM(NSUInteger, EntryType) {
     <key>NSAllowsArbitraryLoads</key>
 		<true/>
 ```
-
+4.如果在xcode15上面运行demo，如果在hash.hpp文件中出现下面代码报错，是因为在RTC-Folly的三方库没有进行xcode15的适配，可以根据xcode引导进行修改
+```
+#else template <typename T> struct hash_base : std::__unary_function<T, std::size_t> {}; #endif
+```
+修改为
+```
+#else template <typename T> struct hash_base : std::unary_function<T, std::size_t> {}; #endif
+```
