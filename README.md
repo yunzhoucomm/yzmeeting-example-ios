@@ -120,6 +120,98 @@ typedef NS_ENUM(NSUInteger, EntryType) {
                               @"avatar" : @"http://your_user_info_url.com:xxx/photos/4dde5410e72f9440e510735638723358"
     };    
 ```
+### 发起呼叫
+```
+NSDictionary *userDic = @{@"userId" : @"xxxx",
+                              @"userName" : @"xxxx",
+                              @"avatar" : @"xxxx"
+    };
+    [[YunzhouMeetingApi sharedInstance] startWithController:self options:@{
+        @"userInfo" : userDic,
+        @"serverUrl" : @"xxxx",
+        @"participant" : @[
+            @{@"userId" : @"xxxx",
+              @"userName" : @"xxxx",
+              @"avatar" : @"xxxx"
+            }
+        ],
+        @"roomName" : @"房间名称-发起呼叫",
+        @"type" : @(TelType),
+        @"mode" : @(PersonType)
+    } meetingType:EntryType_Call_Start];
+```
+options参数说明：
+
+| 参数           | 含义                                                    |
+| :------------- | ------------------------------------------------------- |
+| userInfo        | 设置参会人信息，构造参数依次为用户id， 用户名，用户头像 |
+| serverUrl       | 设置会议服务器地址 |
+| participant     | 被邀请人用户信息（人员信息数组）|
+roomName         | 房间名字|
+| type             | 通话类型(TelType枚举)|
+| mode             | 通话模式(PersonType枚举)|
+
+TelType枚举事件
+```
+/// 通话类型
+typedef NS_ENUM(NSUInteger, TelType) {
+    TelType_Audio              = 0,         // 语音通话
+    TelType_Video              = 1,         // 视频通话
+};
+```
+PersonType枚举事件
+```
+/// 通话模式
+typedef NS_ENUM(NSUInteger, PersonType) {
+    PersonType_Single          = 0,         // 单人通话
+    PersonType_Multiple        = 1,         // 多人通话
+};
+```
+### 收到呼叫
+```
+NSDictionary *userDic = @{@"userId" : @"xxxx",
+                              @"userName" : @"xxxx",
+                              @"avatar" : @"xxxx"
+    };
+    [[YunzhouMeetingApi sharedInstance] startWithController:self options:@{
+        @"userInfo" : userDic,
+        @"meetingData" : @{
+            @"serverUrl" : @"xxxx",
+            @"caller" : @[
+                @{@"userId" : @"xxxx",
+                  @"userName" : @"xxxx",
+                  @"avatar" : @"xxxx"
+                }
+            ],
+            @"roomId" : @"xxxx",
+            @"type" : @(telType),
+            @"mode" : @(personType)
+        }
+    } meetingType:EntryType_Call_Receive];
+```
+options参数说明：
+
+| 参数           | 含义                                                    |
+| :------------- | ------------------------------------------------------- |
+| userInfo        | 设置参会人信息，构造参数依次为用户id， 用户名，用户头像 |
+| meetingData     | 会议信息（该信息是由服务器推送得来，demo工程只是模拟了一下推送数据）
+
+meetingData模拟数据
+```
+@"meetingData" : @{
+        @"serverUrl" : @"xxxx",
+        @"caller" : @[
+            @{@"userId" : @"xxxx",
+              @"userName" : @"xxxx",
+              @"avatar" : @"xxxx"
+            }
+        ],
+        @"roomId" : @"xxxx",
+        @"type" : @(telType),
+        @"mode" : @(personType)
+    }
+```
+
 
 # 常见问题
 
